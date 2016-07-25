@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <?php
-$dbServer = "us-cdbr-iron-east-03.cleardb.net";
-$dbUserName = "b7d2ee3e1f3444"; 
-$dbPassword = "14d96b46"; 
-$dbName = "heroku_4b873a8d632cc30"; 
+require 'dbinfo.php';
 $query_startup ="SELECT * FROM startups WHERE (TYPE='startup') ORDER BY name"; 
 $query_investor ="SELECT * FROM startups WHERE(TYPE='investor') ORDER BY name"; 
 if($_POST["type"] == "Startups")
@@ -15,10 +12,6 @@ else if ($_POST["type"] == "Investors")
     $query = $query_investor; 
 }
 
-$connection=new mysqli($dbServer, $dbUserName,$dbPassword,$dbName); 
-
-if($connection->connect_errno)
-    exit("Database Connection Failed. Reason: ".$connection->connect_error); 
 $resultObj = $connection->query($query);
 ?>
 <html lang="en">
