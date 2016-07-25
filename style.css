@@ -1,0 +1,38 @@
+.form-group .form-control
+{
+    width: 200px;
+}
+
+form
+{
+    margin: 20px;
+}
+
+form select 
+{
+    margin: 10px;
+}
+
+body
+{ 
+    margin: 30 px;
+     text-align: center;
+}
+
+body form select
+{
+    display:block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+body p 
+{
+    color:  #0033cc; 
+}
+
+body h4
+{
+    font-weight: bold;
+}
